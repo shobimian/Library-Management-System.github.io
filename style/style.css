@@ -1,0 +1,129 @@
+body{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.form{
+	width: 700px;
+}
+.form input{
+	padding: 9px 10px;
+	margin: 10px;
+	width: 600px;
+	border: 2px solid black; 
+	border-radius: 10px;
+	outline: none;
+}
+.btn-submit, .btn-goback{
+	padding: 9px 15px;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	color: white;
+	transition: all 1s;
+}
+.btn-submit:hover{
+    cursor: pointer;
+    background-color: green;
+} 
+.btn-goback:hover{
+	cursor: pointer;
+	background-color: darkblue;
+}
+.btn-submit{
+	background-color: #24CD0E;
+}
+.btn-goback{
+	background-color: blue;
+}
+table{
+	margin-left: 90px;
+	margin-top: 10px;
+	text-align: center;
+	width: 90%;
+}
+th{
+	padding: 10px 20px;
+	background-color: blue;
+	color: white;
+}
+td{
+	padding: 10px 20px;
+	background-color: #D9D4D0;
+}
+.main h1{
+	margin-left: 90px;
+}
+.btn-div{
+	margin-left: 90px;
+}
+.btn-div button{
+	padding: 10px 35px;
+	background-color: blue;
+	color: white;
+	border: 1px solid transparent;
+	border-radius: 5px;
+	transition: all 1s;
+}
+.btn-div button:hover{
+	cursor: pointer;
+	background-color: darkblue;
+}
+.editBtn,.deleteBtn{
+	padding: 10px 25px;
+	border: none;
+	border-radius: 7px;
+	transition: all 1s;
+	/*display: none;*/
+}
+.deleteBtn{
+	background-color: #FF0030;
+	color: white;
+	outline: none;
+}
+.editBtn{
+	background-color: #09DC40;
+	color: white;
+}
+.editBtn:hover{
+	cursor: pointer;
+	background-color: green;
+} 
+.deleteBtn:hover{
+	cursor: pointer;
+	background-color: #B20909;
+}
+.doneBtn{
+	display: none;
+	padding: 10px 25px;
+	border: none;
+	border-radius: 7px;
+	color: white;
+	transition: all 1s;
+	background-color: blue;
+	
+}
+.doneBtn:hover{
+	cursor: pointer;
+	background-color: #11CD0C;
+}
+.cancelBtn{
+	display: none;
+	background-color: #FF0030;
+	color: white;
+	padding: 10px 25px;
+	border: none;
+	border-radius: 7px;
+	transition: all 1s;
+}
+.cancelBtn:hover{
+	cursor: pointer;
+	background-color: #B20909;
+}
+.updateInputs{
+	padding: 5px;
+	border: 3px solid black;
+	border-radius: 5px;
+	width: 90%;
+	/*outline: none;*/
+}
