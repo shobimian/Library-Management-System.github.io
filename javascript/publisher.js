@@ -2,19 +2,18 @@ window.addEventListener("DOMContentLoaded", displayItems);
 function displayItems() {
   let itemStorage = localStorage.getItem("books");
     itemArray = JSON.parse(itemStorage);
-    let count = itemArray.reduce((accu, curr) => {
-		console.log(index)
+    let countAuthor = itemArray.reduce((accu, curr) => {
       if (accu[curr.publisher]) {
         accu[curr.publisher].count++;
       } else {
-        accu[curr.publisher] = { publisher: [curr.publisher], count: 1 };
+        accu[curr.publisher] = { publisher: curr.publisher, count: 1 };
       }
       return accu;
     }, {});
     let displayData = "";
     let htmlTable = document.getElementById("dataTable");
-    for (accu in count) {
-      let dataContent = count[accu];
+    for (accu in countPublisher) {
+      let dataContent = countPublisher[accu];
       displayData += `<tr>
 					<td>${dataContent.publisher}</td>
 					<td>${dataContent.count}</td>
@@ -23,12 +22,12 @@ function displayItems() {
 				    </td>
 				 </tr>`;
       htmlTable.innerHTML = displayData;
-    
+    }
   }
-}
-//..................delete fucntion publisher.............
-let deleteItem =  document.getElementsByClassName("deleteBtn");
-console.log(deleteItem);
+//...............delete function author............
+
+  let deleteItem =  document.getElementsByClassName("deleteBtn");
+// console.log(deleteItem);
 function deleteditem() {
 	let targetData = event.target.parentElement.parentElement;
 	// console.log(dummy);
@@ -36,12 +35,11 @@ function deleteditem() {
 	let itemStorage = localStorage.getItem("books");
 		itemArray = JSON.parse(itemStorage);
 		let filterdata = itemArray.filter(items=>{
-			return items.publisher !==name;
+			return items.publisher !== name;
 		})
-		console.log(filterdata);
+		// console.log(filterdata);
 		localStorage.setItem("books", JSON.stringify(filterdata));
     targetData.remove();
 	 	alert("item has been deleted");
-     displayItems();
-
+    displayItems();
 }
