@@ -2,7 +2,7 @@ window.addEventListener("DOMContentLoaded", displayItems);
 function displayItems() {
   let itemStorage = localStorage.getItem("books");
     itemArray = JSON.parse(itemStorage);
-    let countAuthor = itemArray.reduce((accu, curr) => {
+    let countPublisher = itemArray.reduce((accu, curr) => {
       if (accu[curr.publisher]) {
         accu[curr.publisher].count++;
       } else {
@@ -24,7 +24,7 @@ function displayItems() {
       htmlTable.innerHTML = displayData;
     }
   }
-//...............delete function author............
+//...............delete function publisher............
 
   let deleteItem =  document.getElementsByClassName("deleteBtn");
 // console.log(deleteItem);
